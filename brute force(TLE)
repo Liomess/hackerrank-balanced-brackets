@@ -1,0 +1,15 @@
+stack=[]
+    d={"]":"[",")":"(","}":"{"}
+    n=len(s)
+    for i in range(n):
+        if s[i]=="[" or s[i]=="(" or s[i]=="{":
+            stack.append(s[i])
+        else:
+            if stack[-1]==d[s[i]]:
+                stack.pop()
+            else:
+                stack.append(s[i])
+    if stack==[]:
+        return "YES"
+    else:
+        return "NO"
