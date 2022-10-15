@@ -1,0 +1,15 @@
+stacks = [1]
+
+    for i in s:
+        if stacks[-1] == '(' and i == ')':
+            stacks.pop()
+        elif stacks[-1] == '[' and i == ']':
+            stacks.pop()
+        elif stacks[-1] == '{' and i == '}':
+            stacks.pop()
+        else:
+            stacks.append(i)
+
+    if stacks==[1]:
+        return 'YES'
+    return "NO"
